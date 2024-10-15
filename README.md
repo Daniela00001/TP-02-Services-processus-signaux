@@ -31,11 +31,12 @@ Inconvénients : Moins sécurisé que l’authentification par clé, vulnérable
 <h1>
 Exercice 3 : les tubes
 </h1>
+<h2>Quelle est la diff´erence entre tee et cat ?</h2>
 
+cat est utilisé pour afficher le contenu d'un fichier ou d'un flux. Si utilisé avec une redirection (>), il écrase ou redirige totalement la sortie.
+tee permet à la fois d'afficher la sortie dans le terminal et de l'enregistrer dans un fichier.
 
-
-
-
+<h2>Que font les commandes suivantes :</h2>
 
 <pre>$ ls | cat</pre>
 ls génère la liste des fichiers, puis cette sortie est envoyée à cat via le pipe. cat affiche simplement la liste à nouveau.
