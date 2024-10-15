@@ -40,15 +40,15 @@ Pour des raisons de sécurité, j'ai vérifié les permissions du fichier avec <
 
 <pre>chmod 744 .ssh/authorized_keys</pre>
 
-Ensuite, je me suis déconnecté du serveur avec exit et j'ai retesté la connexion avec la commande suivante :
-<pre>ssh -i ~/.ssh/id_rsa root@localhost</pre>
-Maintenant, je n'ai plus besoin d'entrer de mot de passe pour me connecter.
-
 
 
 
 <h1>1.4 Exercice : Authentification par clef : depuis la machine hote</h1>
 
+
+Ensuite, je me suis déconnecté du serveur avec exit et j'ai retesté la connexion avec la commande suivante :
+<pre>ssh -i ~/.ssh/id_rsa root@localhost</pre>
+Maintenant, je n'ai plus besoin d'entrer de mot de passe pour me connecter.
 
 
 
