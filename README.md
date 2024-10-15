@@ -28,6 +28,40 @@ Avantages : Facilité d’utilisation sans nécessiter de gestion de clés SSH.
 Inconvénients : Moins sécurisé que l’authentification par clé, vulnérable aux attaques par force brute.
 
 
+
+
+<h1>1.2 Exercice : Authentification par clef / G´en´eration de clefs</h1>
+
+
+Pour générer une clé publique et privée sur Windows, j'ai utilisé Cmder. J'ai entré la commande <pre>ssh-keygen</pre> dans le terminal et suivi les étapes en validant chacune.
+
+
+<h1>1.3 Exercice : Authentification par clef / Connection serveur</h1>
+
+
+Pour me connecter au serveur en utilisant ma clé publique, j'ai d'abord dû transférer la clé sur le serveur.
+
+<h3>Étapes :</h3>
+Je me suis connecté en SSH depuis ma machine physique.
+
+Ensuite, je suis allé dans le répertoire /root du serveur.
+J'ai vérifié si le dossier caché .ssh existait avec ls -a.Puis, j'ai créé le fichier authorized_keys dans ce répertoire avec la commande :<pre>nano .ssh/authorized_keys</pre>
+Sur ma machine locale, j'ai affiché le contenu de ma clé publique avec :<pre>cat ~/.ssh/id_rsa.pub</pre>
+
+J'ai copié la clé, puis je l'ai collée dans le fichier authorized_keys sur le serveur. Ensuite, j'ai sauvegardé et fermé le fichier.
+Pour des raisons de sécurité, j'ai vérifié les permissions du fichier avec <pre>ls -l .ssh/</pre> puis j'ai attribué les bons droits :
+
+<pre>chmod 744 .ssh/authorized_keys</pre>
+
+Ensuite, je me suis déconnecté du serveur avec exit et j'ai retesté la connexion avec la commande suivante :
+<pre>ssh -i ~/.ssh/id_rsa root@localhost</pre>
+Maintenant, je n'ai plus besoin d'entrer de mot de passe pour me connecter.
+
+
+
+
+
+
 <h1>
 Exercice 3 : les tubes
 </h1>
