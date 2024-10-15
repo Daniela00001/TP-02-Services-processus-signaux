@@ -178,7 +178,7 @@ root           6       2  0 19:43 ?        00:00:00 [netns]
 
 
 Reprendre la question pr´ec´edente avec la commande pstree.
-Pour afficher uniquement les ancêtres de la commande ps, on tilise:
+Pour afficher uniquement les ancêtres de la commande ps, on utilise:
 <pre>
     pstree -p $(pgrep -n ps)  --------->
 systemd(1)─┬─cron(455)
