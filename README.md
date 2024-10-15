@@ -26,3 +26,52 @@ Utilisation : À utiliser avec précaution, généralement désactivé en produc
 Autorise l’authentification par mot de passe.
 Avantages : Facilité d’utilisation sans nécessiter de gestion de clés SSH.
 Inconvénients : Moins sécurisé que l’authentification par clé, vulnérable aux attaques par force brute.
+
+
+
+
+
+
+
+
+
+
+
+<pre>$ ls | cat</pre>
+ls génère la liste des fichiers, puis cette sortie est envoyée à cat via le pipe. cat affiche simplement la liste à nouveau.
+En résumé, cela revient à faire un simple ls, car cat ne modifie pas la sortie.
+
+
+<pre>$ ls -l | cat > liste</pre>
+La sortie de ls -l (les informations détaillées sur les fichiers du répertoire) est sauvegardée dans un fichier nommé liste, mais n'est pas affichée dans le terminal.
+
+
+<pre>$ ls -l | tee liste</pre>
+La sortie de ls -l est affichée dans le terminal et est enregistrée dans un fichier nommé liste.
+
+
+<pre>$ ls -l | tee liste | wc -l</pre>
+La sortie de ls -l est affichée à l'écran, enregistrée dans le fichier liste, puis le nombre de lignes de cette sortie est compté et affiché. Cela donne le nombre d'éléments (fichiers ou répertoires) dans le répertoire courant.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
